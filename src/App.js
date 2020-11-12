@@ -14,7 +14,7 @@ function App() {
   const [cocktails, setCocktails] = useState([]);
   const [loadCocktails, setLoadCocktails] = useState(true);
   const getCocktail = () => {
-    Axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=")
+    Axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=g")
       .then((res) => {
         setCocktails(res.data.drinks);
         setLoadCocktails(false);

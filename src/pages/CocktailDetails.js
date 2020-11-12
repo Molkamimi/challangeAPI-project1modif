@@ -2,7 +2,7 @@ import Axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Spinner } from "reactstrap";
 
-import SingleCocktail from "../components/SingleCocktail";
+import Cocktail from "../components/Cocktail";
 
 function CocktailDetail(props) {
   const [cocktail, setCocktail] = useState({});
@@ -26,7 +26,7 @@ function CocktailDetail(props) {
       {loadCocktail ? (
         <Spinner />
       ) : (
-        <SingleCocktail cocktail={cocktail} loadCocktail={loadCocktail} />
+        <Cocktail cocktail={cocktail} loadCocktail={loadCocktail} />
       )}
     </div>
   );

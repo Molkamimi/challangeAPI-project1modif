@@ -15,17 +15,20 @@ const SingleCocktail = ({ cocktail }) => {
       <Card>
         <CardImg
           top
-          width="100%"
+          width="20%"
           src={cocktail.strDrinkThumb}
           alt="Card image cap"
         />
         <CardBody>
           <CardTitle tag="h5">{cocktail.name}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">
-            {cocktail.idDrink}
+            {cocktail.strDrink}
+          </CardSubtitle>{" "}
+          <CardSubtitle tag="h6" className="mb-2 text-muted">
+            {cocktail.strCategory}
           </CardSubtitle>
           <Link to={`/cocktails/${cocktail.idDrink}`}>
-            <Button>Button</Button>
+            <Button>More Details</Button>
           </Link>
         </CardBody>
       </Card>

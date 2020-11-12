@@ -22,7 +22,13 @@ const NavBar = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md" className="mr-2">
+      <Navbar
+        color="light"
+        light
+        expand="md"
+        className="mr-2"
+        style={{ display: "flex", justifyContent: "space-between" }}
+      >
         <Link to="/">Home</Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
