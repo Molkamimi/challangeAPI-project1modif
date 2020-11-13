@@ -13,8 +13,12 @@ import { Route, Switch } from "react-router-dom";
 function App() {
   const [cocktails, setCocktails] = useState([]);
   const [loadCocktails, setLoadCocktails] = useState(true);
+  const [Search, setSearch] = useState("margarita");
   const getCocktail = () => {
-    Axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=g")
+    Axios.get(
+      "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+    )
+
       .then((res) => {
         setCocktails(res.data.drinks);
         setLoadCocktails(false);
@@ -23,10 +27,11 @@ function App() {
   };
   useEffect(() => {
     getCocktail();
-  }, []);
+  }, [Search]);
+
   return (
     <div className="App">
-      <NavBar />
+      <NavBar setSearch={setSearch} />
       <Switch>
         <Route
           exact

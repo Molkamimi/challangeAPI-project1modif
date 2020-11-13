@@ -9,6 +9,9 @@ function CocktailList({ cocktails, loadCocktails }) {
         display: "flex",
         justifyContent: "space-between",
         flexWrap: "wrap",
+        paddingTop: "10%",
+        marginLeft: "25%",
+        width: "40%",
       }}
     >
       {loadCocktails ? (

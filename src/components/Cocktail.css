@@ -1,5 +1,11 @@
-.text-muted {
-  widows: 30px;
+.card {
   color: black;
   font-style: italic;
+  font-size: medium;
+}
+img.Card-img-top {
+  justify-content: center;
+  padding: 30px;
+  margin-left: 10px;
+  width: 20%;
 }

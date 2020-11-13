@@ -28,7 +28,9 @@ const SingleCocktail = ({ cocktail }) => {
             {cocktail.strCategory}
           </CardSubtitle>
           <Link to={`/cocktails/${cocktail.idDrink}`}>
-            <Button>More Details</Button>
+            <Button style={{ marginLeft: "-8%", color: "pink" }}>
+              More Details
+            </Button>
           </Link>
         </CardBody>
       </Card>

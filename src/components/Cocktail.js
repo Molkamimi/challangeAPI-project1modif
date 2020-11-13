@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   Card,
   CardText,
@@ -12,7 +13,7 @@ import {
 
 const Cocktail = ({ cocktail, loadCocktail }) => {
   return (
-    <div>
+    <div className="text-muted">
       {loadCocktail ? (
         <Spinner />
       ) : (
@@ -24,7 +25,7 @@ const Cocktail = ({ cocktail, loadCocktail }) => {
             alt="Card image cap"
           />
           <CardBody>
-            <CardTitle tag="h5">{cocktail.strDrink}</CardTitle>
+            <CardTitle tag="h6">{cocktail.strDrink}</CardTitle>
 
             <CardText>
               <small className="text-muted">
@@ -41,11 +42,7 @@ const Cocktail = ({ cocktail, loadCocktail }) => {
                 Ingredient:{cocktail.strIngredient3}
               </small>
             </CardText>
-            <CardText>
-              <small className="text-muted">
-                Ingredient:{cocktail.strIngredient4}
-              </small>
-            </CardText>
+
             <CardText>
               <small className="text-muted">
                 Instructions:{cocktail.strInstructions}
