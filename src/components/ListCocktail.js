@@ -1,8 +1,9 @@
 import React from "react";
-import { Spinner } from "react-bootstrap";
-import SingleCocktail from "./SingleCocktail";
 
-function CocktailList({ cocktails, loadCocktails }) {
+import SingleCocktail from "./SingleCocktail";
+import LinearProgress from "@material-ui/core/LinearProgress";
+import Erros from "../pages/Error";
+function ListCocktail({ cocktails, loadCocktails }) {
   return (
     <div
       style={{
@@ -15,7 +16,11 @@ function CocktailList({ cocktails, loadCocktails }) {
       }}
     >
       {loadCocktails ? (
-        <Spinner animation="border" variant="danger" />
+        <LinearProgress />
+      ) : cocktails == null ? (
+        <h1 style={{ textAlign: "center" }}>
+          No Cocktails Matched Your Search Criteria
+        </h1>
       ) : (
         cocktails.map((el) => <SingleCocktail key={el.idDrink} cocktail={el} />)
       )}
@@ -23,4 +28,4 @@ function CocktailList({ cocktails, loadCocktails }) {
   );
 }
 
-export default CocktailList;
+export default ListCocktail;

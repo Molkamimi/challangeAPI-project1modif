@@ -16,7 +16,7 @@ function App() {
   const [Search, setSearch] = useState("margarita");
   const getCocktail = () => {
     Axios.get(
-      "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+      `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${Search}`
     )
 
       .then((res) => {

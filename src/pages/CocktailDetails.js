@@ -7,7 +7,7 @@ import Cocktail from "../components/Cocktail";
 function CocktailDetail(props) {
   const [cocktail, setCocktail] = useState({});
   const [loadCocktail, setLoadCocktail] = useState(true);
-  const [Search, setSearch] = useState("margarita");
+ 
   const { id } = props.match.params;
   const getCocktailById = () => {
     Axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
@@ -29,7 +29,7 @@ function CocktailDetail(props) {
         <Cocktail
           cocktail={cocktail}
           loadCocktail={loadCocktail}
-          Search={Search}
+          
         />
       )}
     </div>
